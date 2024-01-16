@@ -1,7 +1,7 @@
-Aplikasi Pengenalan Pola Inputan Chatbot pada Mesin PL SQL MySQL
+Chatbot Input Pattern Recognition Application on MySQL
 ==========================
 
-Sebuah aplikasi untuk proses pengenalan pola  menggunakan algoritma N-gram dan Full-Text yang diimplementasikan pada PL SQL di MySQL. 
+Application for the pattern recognition process using the N-gram and Full-Text algorithms implemented in PL SQL in MySQL
 
 
 Project Structure
@@ -18,15 +18,15 @@ Requirements:
 =============
 * MySQL 8.0 or more
 
-Test pengenalan pola
+Pattern Recognition test
 ======
 * Import `backup_test_sql` to your database
 * Run sql query from `query_to_test_sql`
 
 Usage on Chatbot:
 ======
-* Aktifkan MySQL 8.0
+* Active MySQL 8.0
 * Set webhook 
-*	Buat fungsi untuk menerima input dari user dan masukkan ke tabel tb_inbox 
-*	Start event inbox_looping_db_1 yang memanggil sp_pengenalan_pola untuk memproses pesan user, pesan balasan dapat dilihat pada tabel tb_outbox  
-*	Buat fungsi untuk mengambil pesan dari tb_outbox dan kirim ke user
+*	Create a function to receive input from the user and insert it into the tb_inbox table
+*	Start event inbox_looping_db_1 which calls sp_pengenalan_pola to process user messages, reply messages can be seen in the tb_outbox table 
+*	Create a function to retrieve messages from tb_outbox and send to the user
